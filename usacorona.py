@@ -20,7 +20,6 @@ for row in rows:
     tot.append(z)
 
 for i in tot:
-    print(i)
     if len(i)==7:
         st,tc,nc,totd,newd,acc,su=i
         d['Corona'].append({
@@ -32,7 +31,6 @@ for i in tot:
             "ActiveCase":acc,
 
         })
-print(d)
         
          
 
