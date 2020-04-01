@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import jsonify
 import usacorona
-app = Flask(__name__)
+
 app = Flask(__name__)
 
 
