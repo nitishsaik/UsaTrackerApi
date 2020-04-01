@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/total', methods=['GET'])
 def tot():
-    return jsonify(usacorona.d)
+    return jsonify(usacorona.f)
 
 @app.route('/')
 def index():
