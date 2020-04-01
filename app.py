@@ -13,4 +13,4 @@ def tot():
 def index():
     return jsonify(usacorona.d)
 if __name__=="__main__":
-    app.run(debug=True,host="127.0.0.1",port=4444)
+    app.run(threaded=True, port=5000)
