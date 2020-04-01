@@ -8,6 +8,34 @@ headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537
 page=requests.get(URL,headers=headers)
 soup=bs(page.content,'html.parser')
 
+
+
+f={
+    "Main":[]
+}
+ss=[]
+mains=soup.findAll("div", {"id": "maincounter-wrap"} )
+for i in mains:
+    ss.append(i.find("span").text)
+cocu,dea,rec=ss
+f["Main"].append({
+    "CoronaCases":cocu,
+    "CoroanDeaths":dea,
+    "recoverd":rec
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 tables=soup.find('table')
 rows = tables.find_all('tr')
 d={
