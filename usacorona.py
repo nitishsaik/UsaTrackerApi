@@ -11,14 +11,14 @@ soup=bs(page.content,'html.parser')
 
 
 f={
-    "Main":[]
+    "Stats":[]
 }
 ss=[]
 mains=soup.findAll("div", {"id": "maincounter-wrap"} )
 for i in mains:
     ss.append(i.find("span").text)
 cocu,dea,rec=ss
-f["Main"].append({
+f["Stats"].append({
     "CoronaCases":cocu,
     "CoroanDeaths":dea,
     "recoverd":rec
